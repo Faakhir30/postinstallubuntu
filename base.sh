@@ -29,6 +29,7 @@ sudo mv cursor.AppImage /usr/local/bin/cursor || exit_on_failure
 # 3. Install Git
 echo "Installing Git..."
 sudo apt install -y git || exit_on_failure
+#  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
 
 # 4. Install npm
 echo "Installing npm..."
@@ -72,9 +73,7 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-a
 
 # 9. Install kubectl
 echo "Installing kubectl..."
-curl -LO "https://dl.k8s.io/release/v1.26.0/bin/linux/amd64/kubectl" || exit_on_failure
-sudo mv kubectl /usr/local/bin/ || exit_on_failure
-sudo chmod +x /usr/local/bin/kubectl || exit_on_failure
+sudo snap install kubectl --classic || exit_on_failure
 
 # 10. Install Visual Studio Code
 echo "Installing Visual Studio Code..."
